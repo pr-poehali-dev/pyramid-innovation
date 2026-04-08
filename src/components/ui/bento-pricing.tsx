@@ -1,7 +1,8 @@
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Check, SparklesIcon } from "lucide-react"
+import { SparklesIcon } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import DotPattern from "@/components/ui/dot-pattern"
 
 type PricingCardProps = {
@@ -57,7 +58,7 @@ function PricingCard({
       <ul className="text-gray-300 grid gap-2 p-3 text-xs font-open-sans-custom">
         {features.map((f, i) => (
           <li key={i} className="flex items-center gap-2">
-            <Check className="w-[1.05rem] h-[1.05rem] text-white flex-shrink-0" strokeWidth={3} />
+            <Icon name="Check" size={17} className="text-white flex-shrink-0" />
             <span>{f}</span>
           </li>
         ))}
@@ -120,7 +121,7 @@ export function BentoPricing() {
               "Импорт дизайнов из популярных инструментов",
             ].map((f, i) => (
               <li key={i} className="flex items-center gap-2">
-                <Check className="w-[1.05rem] h-[1.05rem] text-white flex-shrink-0" strokeWidth={3} />
+                <Icon name="Check" size={17} className="text-white flex-shrink-0" />
                 <span className="leading-relaxed">{f}</span>
               </li>
             ))}
